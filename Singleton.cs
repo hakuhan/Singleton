@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace BaiSingleton
 {
@@ -45,6 +45,11 @@ namespace BaiSingleton
         }
 
         private static bool applicationIsQuitting = false;
+
+        void Awake()
+        {
+            Instance = this;
+        }
 
         public void OnDestroy()
         {
